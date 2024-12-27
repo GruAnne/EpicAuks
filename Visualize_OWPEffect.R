@@ -1,7 +1,7 @@
-## Gemini Wind Park - Habitat Loss of AUK species
-## PPS-AI WP3 -- Wageningen Marine Research
-## Anne Grundlehner (anne.grundlehner@wur.nl)
-## Project Lead: Mardik Leopold, Afra Asjes
+## Project: EPIC - Habitat Loss of AUK species
+## Wageningen Marine Research, Den Helder, The Netherlands
+## Script by Anne Grundlehner (anne.grundlehner@utas.edu.au)
+
 
 ## In this script we use the results from the modelling and simulations
 ## We visualize the effect of OWP on habitat loss over time and over space
@@ -28,9 +28,10 @@ library(readxl)
 library(viridis)
 library(RColorBrewer)
 
+my_wd = "[insert your working directory]"
 
 ## Get data
-setwd("~/W/IMARES/TT/Zeevogels/Public/Gemini HiDef surveys BioConsult/Modelling") #W-schijf
+setwd(my_wd)
 RB <- read_xlsx("BayesianTestStatistics_OWPEffects_simulations.xlsx",
                   sheet = "RB", col_types = "text")%>%
   pivot_longer(cols = !c("Survey"))%>%
@@ -104,7 +105,7 @@ ggplot(RB[RB$Area %in% c("BU", "ZE", "Middle", "Gemini") & RB$Survey != "Mean",]
   facet_wrap(~Area)+
   ggtitle("Temporeel verloop")+ylab("Value test statistic")+
   geom_hline(yintercept = 0.5, linetype = "dashed", col="darkgrey")+
-  xlab("Survey (chrolonogische volgorde)")+ylim(0,1)
+  xlab("Survey")+ylim(0,1)
 
 ggplot(GM[GM$Area %in% c("BU", "ZE", "Middle", "Gemini") & GM$Survey != "Mean",])+
   geom_point(aes(x = Survey, y=BayStat))+
@@ -112,5 +113,5 @@ ggplot(GM[GM$Area %in% c("BU", "ZE", "Middle", "Gemini") & GM$Survey != "Mean",]
   facet_wrap(~Area)+
   ggtitle("Temporeel verloop")+ylab("Value test statistic")+
   geom_hline(yintercept = 0.5, linetype = "dashed", col="darkgrey")+
-  xlab("Survey (chrolonogische volgorde)")+ylim(0,1)+ggtitle("GM")
+  xlab("Survey")+ylim(0,1)+ggtitle("GM")
 
