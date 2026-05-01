@@ -44,8 +44,25 @@ Description:
 *NOTE*
 Only the ZAG-GAM script for RB is supplied in this repository. Scripts for GM and AUK are identical, to run the models for these other bird groups, the only required adjustment is selection of a different column (GM; AUK) from the imported dataset at the top of the script and replacement of "RB" with "GM" or "AUK" when saving files.
 
-File: 
+File: GeminiDataForModelling_densities.csv
 Description:
+Each row represents one observation. One observation is one photograph taken during one focal survey. One focal survey is performed during one continuous airplane flight. 
+
+code	= Survey code
+Transect	= Numeric Survey ID (Here, we had eight surveys, it ranges 1 to 8)
+YEAR	= Calender year of survey
+MONTH	= Calendar month of survey
+Lat	= Latitude (WSG84) of observation (centre of photo)
+Long	= Longitude (WSG84) of observation (centre of photo)
+Area = surface area (km2) of photo analyzed, used for conversion to bird densities
+Xkm	= Position on x axis in km
+Ykm	= Position on y axis in km
+RB	= Razorbill densities observed (n/100km)
+GM	= Guillemot densities observed (n/100km)
+AUK	= All auks (Guillemots + Razorbills + unidentified auks) densities observed (n/100km)
+Guillemot.n	= Raw count of guillemots
+Razorbill.n	= Raw count of razorbills
+Auks.n = Raw count of all auks (Guillemots + Razorbills + unidentified auks)
 
 File:
 Description:
