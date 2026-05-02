@@ -43,9 +43,8 @@ File: "INLA_ZAG_GM_FullPipeline_clean.R"
 
 Description: This script contains the computation of the Spatial-Temporal ZAG-GAM in R-INLA, for eight surveys, as well as the simulations where we sample random areas around the OWP to compare bird densities in and around the OWP, in order to quantify the habitat loss effect (for details, see Methods).
 
-*NOTE*
-
-Only the ZAG-GAM script for RB is supplied in this repository. Scripts for GM and AUK are identical, to run the models for these other bird groups, the only required adjustment is selection of a different column (GM; AUK) from the imported dataset at the top of the script and replacement of "RB" with "GM" or "AUK" when saving files.
+*NOTE:*
+Only the ZAG-GAM script for GM is supplied in this repository. Scripts for GM, RB and AUK are identical, to run the models for these other bird groups, the only required adjustment is selection of a different column (RB; GM; AUK) from the imported dataset at the top of the script and replacement of "RB" with "GM" or "AUK" when saving files.
 
 
 File: "Visualize_OWPEffect.R"
