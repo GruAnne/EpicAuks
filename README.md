@@ -17,6 +17,11 @@ The goal of the work is to investigate the presence habitat loss in two auk spec
 
 The data consists of bird sightings from aerial surveys in and around an offshore wind park. With the R scripts we create a Bayesian spatial temporal model based on the sightings data, which is then used for a simulation study. For all details of statistical models, interpretation and rationale of modelling procedures, please refer to our article: https://doi.org/10.1016/j.ecoinf.2024.102981 
 
+*Disclaimer:* Suitability of the statistical model provided here (being a Zero-Altered Gamma - Generalized Additive Model with replicate spatial-temporal dependency, see Methods in Grundlehner et al. 2025) to other study contexts, depends on ecological constext, study design, data type, and the nature of the data (i.e. zero-inflation, spatial dependency, temporal dependency, number of surveys, etc.). We therefore advise against uninformed 1:1 application of provided code to other ecological data. We urge anyone wanting to apply the here supplied code / statistical model to other datasets, to: (1) familiarize themselves with a proper understanding of common applied ecological stastical regression approaches (LMs/GLMs/GAMs) and common spatial/temporal dependency structures and a basic ouderstanding of INLA, and (2) perform thorough data exploration on their own dataset to determine appropriate model structure/functions. For more information on data exploration and information of applied model in the code we refer to:
+Zuur, A. F., Ieno, E. N., & Saveliev, A. A. (2017). Spatial, temporal and spatial-temporal ecological data analysis with R-INLA. Highland Statistics Ltd, 1.
+
+
+
 
 Commonly used shortenings 
 
@@ -45,6 +50,7 @@ Description: This script contains the computation of the Spatial-Temporal ZAG-GA
 
 *NOTE:*
 Only the ZAG-GAM script for GM is supplied in this repository. Scripts for GM, RB and AUK are identical, to run the models for these other bird groups, the only required adjustment is selection of a different column (RB; GM; AUK) from the imported dataset at the top of the script and replacement of "RB" with "GM" or "AUK" when saving files.
+
 
 
 File: "Visualize_OWPEffect.R"
