@@ -67,7 +67,7 @@ Description: This script has code to study the effect of the boundary areas, usi
 
 File: "GeminiDataForModelling_densities.csv"
 
-Description: Survey data with auk abundances. Each row represents one observation. One observation is one photograph taken during one focal survey. One focal survey is performed during one continuous airplane flight. 
+Description: Survey data with auk abundances. Each row represents one observation. One observation is one photograph taken during one focal survey. One focal survey is performed during one continuous airplane flight. This data is owned by Wageningen Marine Research & BioConsult SH GmbH & CO KG.
 
 code	= Survey code
 
